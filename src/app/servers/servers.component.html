@@ -29,6 +29,4 @@
         <p> Only visible if 'isNewServerCreated' is true </p>
     } -->
 
-<app-server></app-server>
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
