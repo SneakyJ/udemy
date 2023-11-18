@@ -1,1 +1,18 @@
-<p>Server with id {{serverId}} is {{getServerStatus()}}</p>
+<p [ngStyle]="{
+        backgroundColor: getColor()
+    }"
+    [ngClass]="{online: serverStatus === 'online'}"
+>
+<!--ngStyle works:
+    - as a property binding;
+    - pass a json 'key:value' object in { };
+    - key is a name of the css property;
+    - value is a value of css property.
+   -ngClass works:
+    - also as a property binding;
+    - pass a json 'key:value' object in { };
+    - key is a name of the css class;
+    - value is a condition when class should be added (if true - css class is added).
+-->
+    Server with id {{serverId}} is {{getServerStatus()}}
+</p>
